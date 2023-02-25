@@ -10,10 +10,7 @@
     "build": "cd client && npm install && npm run build"
   },
   "dependencies": {
-    "chalk": "^5.2.0",
-    "date-and-time": "^2.4.2",
     "express": "^4.17.1",
-    "request": "^2.88.2"
   },
   "devDependencies": {
     "react": "^17.0.2",
