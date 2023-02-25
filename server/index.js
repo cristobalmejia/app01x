@@ -1,4 +1,5 @@
-import express from "express";
+const path = require('path');
+const express = require('express');
 import request from 'request';
 import date from 'date-and-time';
 import chalk from 'chalk';
@@ -20,8 +21,16 @@ const cDown = chalk.red;
 const app = express();
 const port = 3000;
 
-app.get("/", (req, res) => {
-    res.sendFile( __dirname + "/" + "table.html" );
+app.use(express.static(path.resolve(__dirname, '../client/build')));
+
+// Handle GET requests to /api route
+app.get("/api", (req, res) => {
+  res.json({ message: "Hello from server!" });
+});
+
+// All other GET requests not handled before will return our React app
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
 });
 
 app.listen(port, () => {
