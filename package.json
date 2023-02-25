@@ -1,0 +1,17 @@
+{
+  "name": "xme-get-price",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Starting Get Price",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "date-and-time": "^2.4.2",
+    "express": "^4.17.1",
+    "request": "^2.88.2"
+  }
+}
