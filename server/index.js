@@ -1,5 +1,7 @@
 const path = require('path');
 const express = require('express');
+
+/*
 import request from 'request';
 import date from 'date-and-time';
 import chalk from 'chalk';
@@ -16,7 +18,7 @@ let lastprice = 0;
 
 const cUp = chalk.green;
 const cDown = chalk.red;
-
+*/
 
 const app = express();
 const port = 3000;
@@ -37,6 +39,8 @@ app.listen(port, () => {
   //call();
 });
 
+
+/*
 //setInterval(checkprice, (intervalo*1000));
 checkprice();
 const intervalprice = setInterval(() => {
@@ -107,3 +111,4 @@ function verifica(timestamp, currentprice) {
     console.log(output);
     lastprice = currentprice;
 }
+*/
